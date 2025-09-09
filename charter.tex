@@ -5,7 +5,7 @@
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Título del proyecto} 
+\titulo{Sistema de Análisis de la Opinión Pública en la Red Social X}
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 %\posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -16,7 +16,7 @@
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
 % IMPORTANTE: no omitir titulaciones ni tildación en los nombres, también se recomienda escribir los nombres completos (tal cual los tienen en su documento)
-\autor{Título y Nombre del autor}
+\autor{Federico Emilio Otero}
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Título y Nombre del director}
@@ -28,8 +28,8 @@
 \cliente{Nombre del cliente}
 \empresaCliente{Empresa del cliente}
  
-\fechaINICIO{30 de abril de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{18 de junio de 2023} 	%Fecha de final de cursada de GdP
+\fechaINICIO{26 de agosto de 2025}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{14 de octubre de 2025} 	%Fecha de final de cursada de GdP
 \fechaFINALTrabajo{15 de mayo de 2024}	%Fecha de defensa pública del trabajo final
 
 
@@ -59,7 +59,7 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-%1      & Se completa hasta el punto 5 inclusive                & {día} de {mes} de 202X \\ \hline
+1      & Se completa hasta el punto 5 inclusive                &9 de septiembre de 2025 \\ \hline
 %2      & Se completa hasta el punto 9 inclusive
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
@@ -85,7 +85,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en \textcolor{red}{la implementación de un prototipo de un sistema de control de temperatura de una caldera industrial}. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{red}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un sistema basado en procesamiento de lenguaje natural (NLP) para analizar las publicaciones en la red social X y comprender la evolución de la opinión pública en términos emocionales y cognitivos. El trabajo tendrá un presupuesto preliminar estimado de 600 horas y un costo estimado de 15.000 USD, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública en junio de 2026.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -106,144 +106,102 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-El objetivo es que el lector, en una o dos páginas, exponga de qué se trata el proyecto y cuáles son sus desafíos, cuál es la motivación para realizarlo y su importancia.
+%%%% DESDE ACA
 
-Se debe introducir el contexto del proyecto, el estado del arte en la temática, describir la propuesta de valor, cuál es el problema que atiende y cuál es la solución que se propone. Se debe dar una descripción funcional de la solución que incluya un diagrama en bloques.
+En contextos políticos dinámicos, el análisis de la opinión pública es necesario para entender el estado emocional y cognitivo de la ciudadanía, así como también sus principales demandas y su nivel de aprobación de las políticas implementadas. Las redes sociales en general, y X en particular, se han convertido en una plataforma clave para comprender estas cuestiones.
 
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+Este proyecto es parte de un emprendimiento personal donde se busca aplicar diferentes herramientas de la inteligencia artificial a las ciencias sociales. Consiste en implementar un sistema de análisis de la opinión pública en la red social X, que podrá complementarse con los estudios de opinión tradicionales para tener un panorama mucho más completo. A diferencia de las encuestas clásicas, que capturan opiniones de forma puntual y estructurada, el análisis de la opinión pública digital brindará una visión continua, no intrusiva y con alto volumen de datos.
 
+Los clientes de este sistema tienen perfiles diversos, y van desde las consultoras de opinión pública, pasando por los espacios políticos hasta los científicos sociales, periodistas y la ciudadanía en general. Se considera que un sistema así será muy útil, ya que facilitará la toma de decisiones y la implementación de políticas públicas, el asesoramiento de diferentes espacios políticos y la investigación científica.
+
+Este sistema constará de una interfaz visual donde podrá consultarse, para un determinado período de tiempo elegido por el usuario, métricas relacionadas al grado de aprobación o desaprobación del gobierno, las emociones involucradas, los sesgos ideológicos, los principales temas en la agenda y la postura frente a ellos. Se podrá visualizar también representaciones gráficas de comunidades ideológicas o cámaras de eco a través del análisis de retweets y menciones.
+
+El sistema se desarrollará en un entorno de Python, utilizando herramientas modernas de NLP como spaCy, HuggingFace Transformers y modelos pre-entrenados para análisis de sentimiento en redes sociales, como BERT o RoBERTa, adaptados a X. Se utilizará una combinación de scraping con snscrape y la API de X para recolectar publicaciones relacionadas con términos clave, hashtags y cuentas oficiales. Los textos serán pre-procesados mediante técnicas de limpieza, normalización y lematización. Luego, se aplicarán distintos modelos, entre ellos:
 \begin{itemize}
-	\item ¿Cuál es el contexto del proyecto, es un emprendimiento personal, un proyecto para una empresa, es parte del programa de vinculación con empresas del posgrado?
-	\item ¿Existen o aplican condiciones especiales al proyecto, financiamiento de algún programa público o privado, acuerdos de confidencialidad, acuerdos sobre la propiedad intelectual de los entregables u otros?
-	\item ¿Cómo se compara la solución propuesta con el estado del arte en el campo de aplicación? ¿En qué aspectos destaca?
-	\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-	\item ¿En qué estado del ciclo de vida está la solución que se propone?
-	\item ¿Cuáles son las características del cliente (el adoptante de los entregables del proyecto) qué valora, qué necesita?
-	\item ¿Por dónde pasa la innovación?
+	\item Modelos para desambiguar términos o expresiones y poder aclarar o traducir ciertos pasajes donde se usan ciertos recursos literarios como el sarcasmo.
+	\item Modelos para entender los sesgos ideológicos y categorizarlos.
+	\item Modelos de análisis de sentimiento para medir la aprobación/desaprobación del gobierno.
+	\item Modelos de detección de emociones (\textit{stance detection}).	
 \end{itemize}
 
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema} y descripción funcional de la solución propuesta.
+En la figura 1 se muestra un diagrama simplificado de la arquitectura del sistema. Se observan cuatro etapas principales del tratamiento de los datos: la extracción o \textit{scrapping}, el pre-procesamiento, la aplicación de distintos modelos y finalmente su almacenamiento y explotación. A su vez, estas etapas están atravesadas por estrategias de integración continua, con el objetivo de automatizar el flujo de los datos.
 
-Las figuras se deben mencionar en el texto ANTES de que aparezcan con una frase como la siguiente: ``En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''.  La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
-
-\begin{figure}[htpb]
+%\begin{figure}[htpb]
+\begin{figure}[H]
 \centering 
-\includegraphics[width=.65\textwidth]{./Figuras/diagBloques.png}
-\caption{Diagrama en bloques del sistema.}
+\includegraphics[width=.75\textwidth]{./Figuras/arquitectura.png}
+\caption{Diagrama de la arquitectura del sistema.}
 \label{fig:diagBloques}
 \end{figure}
 
-\vspace{25px}
-
-El tamaño del texto en TODAS las figuras debe ser adecuado \textbf{para que NO pase lo que ocurre en la figura \ref{fig:diagBloques}}, donde el lector debe esforzarse para poder leer el texto. 
-
-Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama. Se recomienda evitar colores primarios (como rojo, verde o cyan) y usar la gama de colores pastel.
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
+Actualmente, el sistema se encuentra en su fase inicial, estando en desarrollo el proceso de ingesta de los mensajes (\textit{tuits}) desde la API de X.
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-\textbf{Nota importante:} borrar esto y todas las consignas en color rojo antes de entregar este documento). Esto se hace eliminando el par de comandos que forman el bloque consigna, \verb!\begin{consigna}{red}! y \verb!\end{consigna}{red}! del código. 
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos. Si se considera que una persona cumple dos o más roles, entonces \textbf{solo dejarla en el rol más importante}. 
-
-Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente. Si una persona es el Responsable, \textbf{no debe ser colocado también como miembro del equipo}.
-
-
-\begin{table}[ht]
+%\begin{table}[ht]
+\begin{table}[H]
 %\caption{Identificación de los interesados}
 %\label{tab:interesados}
 \begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
+Cliente       & \clientename      &\empclientename	& -       	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+Usuario final & -                 & -             	& -       	\\ \hline
 \end{tabularx}
 \end{table}
 
-El Director suele ser uno de los orientadores.
+Las partes interesadas son las siguientes:
 
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Es deseable listar a continuación las principales características de cada interesado.
- 
-Por ejemplo:
 \begin{itemize}
-	\item Orientador: la Dra. Ing. María Gómez es experta en la temática y va a ayudar con la definición de los requerimientos y el desarrollo del firmware del embebido.
-	\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-	\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
+	\item Cliente: En este item escribiremos una breve descripción del perfil del cliente del proyecto.
+	\item Orientador: En este item escribiremos una breve descripción del perfil del director del proyecto.
+	\item Usuario final: En este item escribiremos una breve descripción del perfil del usuario final del proyecto.
 \end{itemize}
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-
 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
-
-Se recomienda que sea solo un párrafo que continúe con la idea de la frase ``el propósito de este proyecto es...'' (omitir la frase, ya que está en el título de la sección).
-\end{consigna}
+El propósito del proyecto es lograr un análisis más profundo de la evolución de la opinión pública en redes sociales, en particular X, para poder comprender mejor el estado emocional y cognitivo de la ciudadanía. Elegimos esta red social ya que es ampliamente la más utilizada para el intercambio de opiniones políticas y sociales. Se considera que un sistema así será muy útil, ya que facilitará la toma de decisiones y la implementación de políticas públicas, el asesoramiento de diferentes espacios políticos y la investigación científica.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
-
-Se refiere al trabajo que se va a hacer para entregar el producto o resultado especificado. 
-
-Explicitar todo lo quede comprendido dentro del alcance del proyecto. Por ejemplo:
-
 El proyecto incluye:
+
 \begin{itemize}
-	\item Ítem 1.
-	\item Ítem 2.
-		\begin{itemize}
-		\item Subítem 1.
-		\item Subítem 2.
-		\item ...
-		\end{itemize}
-	\item ...
-	
+	\item Extracción automática de publicaciones.
+	\item Pre-procesamiento y normalización.
+	\item Análisis de sentimiento.
+	\item Detección de sesgos ideológicos.
+	\item Detección de emociones o posturas.
+	\item Visualización de métricas o resultados.
 \end{itemize}
 
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
+El presente proyecto no incluye:
 
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-
+\begin{itemize}
+	\item Cobertura de otras redes sociales, como Facebook, Instagram o TikTok.
+	\item Análisis multilingüe: Como limitamos el proyecto al análisis de la opinión pública local, el sistema se enfocará exclusivamente en publicaciones en español.
+	\item Análisis de contenido multimedia: El sistema no analizará contenido multimedia como audios, videos o imágenes.
+	\item Veracidad de los contenidos: Por el momento, el sistema no contará con modelos de \textit{fact-checking} para verificar las afirmaciones, ya que el objetivo principal es analizar opiniones y emociones.
+\end{itemize}
 
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-``Para el desarrollo del presente proyecto se supone que: ...''
+Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
-	\item Supuesto 1.
-	\item Supuesto 2.
-	\item ...
+	\item Las librerías de Python y los modelos de machine learning están disponibles y son herramientas estables y robustas.
+	\item Se cuenta con un acceso a la API de X necesario para la recolección de los datos, tanto en cuanto a su contenido como en cuanto a su volumen, conforme a las políticas de uso de la plataforma.
+	\item Se cuenta con los recursos computacionales necesarios para un adecuado entrenamiento de los modelos.
+	\item Se cuenta con la existencia de personas con las competencias técnicas necesarias para desarrollar el sistema.
+	\item Los temas políticos abordados en la red X son representativos, en alguna medida, de la opinión pública digital, aunque no de toda la población general.
 \end{itemize}
-
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
 
 \section{6. Product Backlog}
 \label{sec:backlog}
